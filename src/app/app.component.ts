@@ -9,9 +9,28 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 export class OrhDemo implements OnInit {
   form: FormGroup;
 
+  data = [
+    {
+      label: " ᠰᠤᠩᠭ᠋ᠠᠯᠲᠠ ᠨᠢᠭᠡ",
+      value: 1
+    },
+    {
+      label: " ᠰᠤᠩᠭ᠋ᠠᠯᠲᠠ ᠬᠤᠶᠠᠷ",
+      value: 2
+    },
+    {
+      label: " ᠰᠤᠩᠭ᠋ᠠᠯᠲᠠ ᠭᠤᠷᠪᠠ",
+      value: 3
+    }
+  ];
+
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
-      text: ['ceshi']
+      text: [""],
+      select: [null],
+      checkbox: [[]],
+      radio: [null],
+      date: [null],
     });
   }
 

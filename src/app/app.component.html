@@ -8,8 +8,28 @@
 
 	<omc-content omc-container>
 		<form [formGroup]="form">
-      <div omc-label>ᠬᠠᠭᠤᠯᠠᠪᠠ</div>
-			<omc-input formControlName="text"></omc-input>
+
+			<div omc-label>ᠬᠠᠭᠤᠯᠠᠪᠠ</div>
+			<omc-input formControlName="text" omcPlaceholder="ᠬᠠᠭᠤᠯᠠᠪᠠ"></omc-input>
+
+			<div omc-label>ᠬᠠᠭᠤᠯᠠᠪᠠ</div>
+			<omc-select formControlName="select" [omcData]="data"></omc-select>
+
+			<div omc-label>ᠬᠠᠭᠤᠯᠠᠪᠠ</div>
+      <omc-checkbox-group [omcData]="data" formControlName="checkbox" [omcLabel]="checkbox"></omc-checkbox-group>
+			<ng-template #checkbox let-name>
+				{{name.label}}
+			</ng-template>
+
+			<div omc-label>ᠬᠠᠭᠤᠯᠠᠪᠠ</div>
+      <omc-radio-group [omcData]="data" formControlName="radio" [omcLabel]="radio"></omc-radio-group>
+			<ng-template #radio let-name>
+				{{name.label}}
+			</ng-template>
+
+			<div omc-label>ᠬᠠᠭᠤᠯᠠᠪᠠ</div>
+			<omc-date formControlName="date"></omc-date>
+
 		</form>
 	</omc-content>
 </omc-layout>

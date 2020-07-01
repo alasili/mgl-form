@@ -2,6 +2,10 @@
     background-color: #1F2328;
 }
 
-:host ::ng-deep omc-tabs {
-    background-color: #f1f1f1;
+:host ::ng-deep .omc-layout {
+    background-color: #f8f8f8;
+}
+
+:host ::ng-deep omc-content {
+    background-color: #f8f8f8!important;
 }
