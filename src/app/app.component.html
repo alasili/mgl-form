@@ -1,1 +1,15 @@
-<omc-button>asdf</omc-button>
+<omc-layout>
+	<omc-header omcWidth="64px">
+		<img slot="logo" src="../../assets/logo.svg" width="32px">
+		<div slot="logout">
+			<omc-icon icon="icon-question-circle" color="#31C27C" size="24"></omc-icon>
+		</div>
+	</omc-header>
+
+	<omc-content omc-container>
+		<form [formGroup]="form">
+      <div omc-label>ᠬᠠᠭᠤᠯᠠᠪᠠ</div>
+			<omc-input formControlName="text"></omc-input>
+		</form>
+	</omc-content>
+</omc-layout>

@@ -21,7 +21,9 @@ import {NgxOrhonMglComponentModule} from "ngx-orhon-mgl-component";
         BrowserAnimationsModule,
         ScrollingModule,
         DragDropModule,
-        NgxOrhonMglComponentModule
+        NgxOrhonMglComponentModule.forRoot({
+            host: ''
+        }),
     ],
     declarations: [OrhDemo],
     bootstrap: [OrhDemo],
