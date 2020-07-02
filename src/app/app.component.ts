@@ -26,7 +26,7 @@ export class OrhDemo implements OnInit {
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
-      text: [""],
+      text: ["", Validators.required],
       select: [null],
       checkbox: [[]],
       radio: [null],
@@ -35,4 +35,13 @@ export class OrhDemo implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  submit() {
+    const {value, valid} = this.form;
+    // for (const key in this.form.controls) {
+    //   this.form.controls[key].markAsDirty();
+    //   this.form.controls[key].updateValueAndValidity();
+    // }
+    console.log(value, valid, 'submit');
+  }
 }
