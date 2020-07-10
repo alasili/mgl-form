@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { MessageService } from "ngx-orhon-mgl-component";
 
 @Component({
   selector: "orh-demo",
@@ -24,7 +25,8 @@ export class OrhDemo implements OnInit {
     }
   ];
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,
+              private message: MessageService) {
     this.form = this.fb.group({
       text: ['', Validators.required],
       select: [null],
